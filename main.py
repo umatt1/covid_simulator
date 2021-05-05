@@ -4,6 +4,7 @@ import random
 import matplotlib.pyplot as plt
 from matplotlib import animation, rc
 from IPython.display import HTML
+import os
 
 EMPTY = 0
 NON_INFECTED = 1
@@ -235,9 +236,6 @@ while True:
                                          p=float(values['-P-']),
                                          q=float(values['-Q-']),
                                          r=float(values['-R-']))
-    frame = 0
-    while frame < 1000:
-        frame += 1
-        sg.popup_animated("gol.gif", time_between_frames=50, background_color="white")
+    os.system("open gol.gif")
 
 window.close()
